@@ -1,0 +1,25 @@
+{
+  "name": "cliente-kiosquero",
+  "version": "1.0.0",
+  "description": "Simple proyecto que ilustra el funcionamiento del circuito cliente-servidor.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon kiosquero"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GasparErrobidart/cliente-kiosquero.git"
+  },
+  "author": "Gaspar G. Errobidart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GasparErrobidart/cliente-kiosquero/issues"
+  },
+  "homepage": "https://github.com/GasparErrobidart/cliente-kiosquero#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  }
+}
