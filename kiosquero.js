@@ -1,10 +1,16 @@
 const express = require('express');
 const server  = express();
 const bodyParser = require('body-parser');
+const printWithStyle = require('./printWithStyle');
 
 server.use(bodyParser.urlencoded());
+server.use((req,res,next)=>{
+  printWithStyle(req);
+  next();
+})
 
 server.get("/",(req,res)=>{
+  console.clear();
   res.sendFile(__dirname + "/home.html")
 })
 
@@ -17,7 +23,6 @@ server.get("/favicon.ico",(req,res)=>{
 })
 
 server.post("/pedir",(req,res)=>{
-  console.log("Body:",req.body);
   res.status(200);
   res.send("Aca tenes, " + req.body.producto);
 });
